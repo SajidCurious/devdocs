@@ -1,0 +1,13 @@
+question,category,expected_evidence,expected_answer
+"Which Python version should I use locally?",answerable,"README.md; Setup_Guide.md","Use Python 3.12."
+"How do I start the API locally?",answerable,"README.md; Setup_Guide.md","Run python -m uvicorn taskflow.main:app --reload."
+"What header is used for protected API endpoints?",answerable,"API_Reference.md","Use the Authorization header with a bearer token."
+"What does POST /api/tasks require?",answerable,"API_Reference.md","A JSON body with a title; description is optional."
+"What status code is returned when a task is created?",answerable,"API_Reference.md","HTTP 201."
+"What is the rate limit?",answerable,"API_Reference.md","100 requests per minute per authenticated account."
+"Which environment variable changes the API timeout?",answerable,"API_Reference.md; Setup_Guide.md","TASKFLOW_TIMEOUT_SECONDS."
+"What port does the local API use by default?",answerable,"README.md","Port 8000."
+"What URL opens the API documentation?",answerable,"Setup_Guide.md","http://localhost:8000/docs."
+"What database does TaskFlow use?",unanswerable,"Not in supplied documents","The documents do not specify a database."
+"Who is the company CTO?",unanswerable,"Not in supplied documents","The documents do not identify a CTO."
+"What is the timeout default?",conflict,"API_Reference.md; Setup_Guide.md","API Reference says 30 seconds; Setup Guide says 60 seconds. Report the conflict."
